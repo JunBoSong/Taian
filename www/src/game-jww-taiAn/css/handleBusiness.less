@@ -1,0 +1,113 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .btn-receivable {
+      display: block;
+      width: 4rem;
+      height: 0.9rem;
+      margin: 0 auto;
+      line-height: 0.9rem;
+      text-align: center;
+      color: #fff;
+      font-size: 0.36rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.16rem;
+      background: #ff730c;
+      box-shadow: 0 0.14rem 0 #f03502;
+    }
+    .header {
+      position: relative;
+      width: 100%;
+      height: 3.4rem;
+      background: url('../images/handle-top.png') 0 0 no-repeat;
+      background-size: 100% auto;
+      .header-btn {
+        position: absolute;
+        bottom: 0.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        .icon-badge {
+          position: absolute;
+          top: -0.3rem;
+          right: -0.3rem;
+          display: block;
+          width: 0.62rem;
+          height: 0.62rem;
+          text-align: center;
+          line-height: 0.62rem;
+          color: #fff;
+          font-size: 0.3rem;
+          font-style: normal;
+          background: url('../images/badge.png') 0 0 no-repeat;
+          background-size: 100% auto;
+        }
+      }
+    }
+    .content {
+      flex: 1 1 auto;
+      height: 0;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+  
+      .item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+        padding: 0 0.3rem;
+        border-bottom: 1px solid #fef3f6;
+        .avator{
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-right: 0.3rem;
+          border-radius: 0.6rem;
+        }
+        .info {
+          flex: 1;
+          .info-name {
+            font-weight: 600;
+            color: #333;
+            margin-top: 0.1rem;
+          }
+          .info-counter {
+            font-size: 0.3rem;
+            color: #666;
+            .num {
+              font-size: 0.4rem;
+            }
+          }
+        }
+        .btn-send {
+          width: 2rem;
+          height: 0.8rem;
+          line-height: 0.8rem;
+          text-align: center;
+          color: #fff;
+          font-size: 0.36rem;
+          border: none;
+          border-radius: 0.16rem;
+          background: #f9688e;
+          box-shadow: 0 0.1rem 0 #eb3a69;
+        }
+        
+      }
+    }
+    .footer {
+      position: relative;
+      width: 100%;
+      height: 3.6rem;
+      text-align: center;
+      background: url('../images/myrabbits_bottom.png') 0 0 no-repeat;
+      background-size: 100% auto;
+      .footer-rabbit {
+        display: block;
+        width: 2.73rem;
+        margin: 0.2rem auto -0.01rem;
+      }
+      .footer-btn {
+        width:5rem;
+      }
+    }
+  }

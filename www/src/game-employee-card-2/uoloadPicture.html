@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <!-- viewport 后面加上 minimal-ui 在safri 体现效果 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 隐藏状态栏/设置状态栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!-- 禁用手机号 -->
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>上传照片</title>
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/uploadPicture.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <img class="w-top" src="./image/guotaiminan.png" alt="顶部幕布">
+        <div class="w-upload">
+            <input id="Upload" type="file" accept="image/*">
+        </div>
+        <canvas id="pic_canvas"></canvas>
+        <i id="canvsa_i"></i>
+        <div class="w-content">
+            <div class="w-btn">
+                <img class="sure-btn-man" id="sureMan" src="./image/sure.png" alt="确定">
+                <img class="people-btn" src="./image/man.png" alt="男头像">
+                <img class="sure-btn-girl" id="sureGirl" src="./image/notSure.png" alt="不确定">
+                <img class="people-btn" src="./image/girl.png" alt="女头像">
+            </div>
+            <div>
+                <input class="fisrst-input" id="name" type="text" placeholder="请输入姓名">
+            </div>
+
+            <div>
+                <input maxlength="10" class="last-input" id="congraturation" type="text" placeholder="请输入您的新年祝福（10字内）">
+            </div>
+            <div>
+                <a class="go" href="./compose.html"></a>
+                <img class="generate" src="./image/generater.png" alt="生成工作证">
+            </div>
+        </div>
+    </div>
+
+    <!--图片预加载-->
+    <div style="display:none;">
+        <img id="upload_bg" src="./image/uploadImg.png">
+        <img id="moneyTest" src="./image/money.png">
+        <img id="compose_bg" src="./image/gtmaww.png">
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="./js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="./js/hammer.min.js"></script>
+    <script type="text/javascript" src="./js/easeljs-0.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/exif.js"></script>
+    <script src="./js/apiConfig.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/uploadPicture.js"></script>
+</body>
+
+</html>

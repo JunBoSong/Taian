@@ -1,0 +1,279 @@
+@armDown: 4.5rem; //大兔子摇臂下降的距离
+body {
+  background: #F87193;  
+}
+.page-add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  .page-add-content {
+    width: 82%;
+    margin: 0 auto;
+    .add-string {
+      display: block;
+      width: 0.16rem;
+      height: 0.3rem;
+      margin: 0 auto;
+      background: #fff;
+      animation: addAnimation;
+      animation-delay: 0.5s;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out; 
+      animation-fill-mode: forwards;
+    }
+    .add-box {
+      position: relative;
+      width: 100%;
+      .add-img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+      }
+      a {
+        position: absolute;
+        display: block;
+      }
+      .btn-start {
+        left: 50%;
+        top: 5.3rem;
+        transform: translateX(-50%);
+        width: 4.6rem;
+        height: 1rem;
+      }
+      .btn-handle {
+        left: 50%;
+        top: 6.4rem;
+        transform: translateX(-50%);
+        width: 4.6rem;
+        height: 1rem;
+      }
+      .btn-rule {
+        left: 10%;
+        top: 7.4rem;
+        width: 2.2rem;
+        height: 0.8rem;
+      }
+      .btn-my-rabbits {
+        right: 10%;
+        top: 7.4rem;
+        width: 2.2rem;
+        height: 0.8rem;
+      }
+    }
+    
+  }
+}
+.page-wrapper {
+  position: relative;
+  .bg{
+    display: block;
+    width: 100%;
+  }
+  .main{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .tips {
+      position: absolute;
+      top: 0.66rem;
+      left: 5%;
+      width: 90%;
+      height: 0.82rem;
+      margin: 0 auto;
+      padding: 0 0.2rem;
+      color: #BC0B3A;
+      .timer {
+        display: inline-block;
+        height: 100%;
+        .icon-clock {
+          display: inline-block;
+          width: 0.52rem;
+          height: 100%;
+          vertical-align: middle;
+          background: url('../images/index_clock.png') 0 center no-repeat;
+          background-size: 100% auto;
+        }
+        .timer-text {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 0.4rem;
+        }
+      }
+      .chance{
+        float: right;
+        display: inline-block;
+        height: 100%;
+        .label{
+          display: inline-block;
+          vertical-align: baseline;
+          font-size: 0.3rem;
+        }
+        .couter  {
+          display: inline-block;
+          vertical-align: baseline;
+          font-size: 0.54rem;
+          font-weight: bold;
+        }
+      }
+    }
+    .lucky-box{
+      position: absolute;
+      top: 1.95rem;
+      left: 50%;
+      width: 74%;
+      height: 7.3rem;
+      transform: translateX(-50%);
+      .arm{
+        position: absolute;
+        width: 2.2rem;
+        &.paused {
+          animation-play-state: paused;
+         -webkit-animation-play-state: paused;
+        }
+        .arm-string {
+          display: block;
+          width: 0.2rem;
+          height: 0.3rem;
+          margin: 0 auto;
+          transition: height 1s linear;
+          background: #fff;
+          &.down {
+            height: @armDown;
+          }
+        }
+        .arm-box {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          .arm-cover {
+            position: relative;
+            z-index: 10;
+            display: block;
+            width: 1.6rem;
+            margin: 0 auto;
+          }
+          .hook {
+            position: relative;
+            width: 1rem;
+            margin: 0 auto;
+            .arm-left, .arm-right {
+              display: inline-block;
+              margin-top: -0.3rem;
+              width: 0.52rem;
+            }
+            .arm-left{
+              margin-left: -0.56rem;
+            }
+            .arm-right{
+              float: right;
+              margin-right: -0.56rem;
+              transform: rotateY(180deg);
+            }
+            .lucky-rabbit{
+              position: absolute;
+              top: 0;
+              display: block;
+              visibility: hidden;
+              width: 100%;
+            }
+          }
+          
+        }
+      }
+      .moveAnimtion{
+        animation: armHorizontalMove;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-timing-function: linear; 
+        animation-fill-mode: forwards;
+      }
+      .rabbits {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+    .btn-lucky {
+      position: absolute;
+      top: 9.3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 4.4rem;
+      height: 1.1rem;
+      border: none;
+      background: none;
+      border-radius: none;
+    }
+  }
+  .menu {
+    position: absolute;
+    bottom: 0.42rem;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    width: 6rem;
+    height: 0.76rem;
+    margin-left: -3rem;
+    border: 1px solid #fff;
+    border-radius: 0.38rem;
+    .menu-item{
+      flex: 1;
+      height: 0.46rem;
+      font-size: 0;
+      text-align: center;
+      &:first-child {
+        border-right: 1px solid #fff;
+      }
+      .icon-star {
+        display: inline-block;
+        width: 0.32rem;
+        height: 100%;
+        margin-right: 0.2rem;
+        vertical-align: middle;
+        background: url('../images/index_star.png') 0 center no-repeat;
+        background-size: 100% auto;
+      }
+      .menu-text {
+        display: inline-block;
+        height: 100%;
+        line-height: 0.46rem;
+        font-size: 0.3rem;
+        vertical-align: middle;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+}
+@keyframes armHorizontalMove {//摇臂水平移动
+  from {
+    left: 3.3rem;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+@keyframes addAnimation {//页面广告动画
+  0% {
+    height: 0.3rem;
+  }
+  50% {
+    height: 2rem;
+  }
+  60% {
+    height: 1.9rem;
+  }
+  100% {
+    height: 2.1rem;
+  }
+}

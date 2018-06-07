@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <!-- viewport 后面加上 minimal-ui 在safri 体现效果 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 隐藏状态栏/设置状态栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <!-- 禁用手机号 -->
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>夹娃娃</title>
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="page-add">
+        <div class="page-add-content">
+            <i class="add-string"></i>
+            <div class="add-box">
+                <img src="./images/jww-show.png" class="add-img" alt="广告图">
+                <a href="javascript:" class="btn-start" id="startGame"></a>
+                <a href="javascript:" class="btn-handle" id="handleBusiness"></a>
+                <a href="./rule.html" class="btn-rule"></a>
+                <a href="javascript:" class="btn-my-rabbits go-my-rabbits"></a>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper" id="pageWrapper">
+        <img src="./images/index_bg.png" class="bg" alt="背景图" />
+        <div class="main">
+            <div class="tips">
+                <div class="timer">
+                    <i class="icon-clock"></i>
+                    <span class="timer-text">00:30</span>
+                </div>
+                <div class="chance">
+                    <span class="label">剩余次数</span> <span class="couter"></span>
+                </div>
+            </div>
+            <div class="lucky-box">
+                <div class="arm">
+                    <i class="arm-string" id="armString"></i>
+                    <div class="arm-box">
+                        <img src="./images/index_cover.png" class="arm-cover" alt="摇臂" />
+                        <div class="hook">
+                            <img src="./images/index_arm.png" class="arm-left" alt="左摇臂" />
+                            <img src="./images/index_arm.png" class="arm-right" alt="右摇臂" />
+                            <img src="./images/index_rabbit.png" class="lucky-rabbit" alt="兔子" />
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/index_rabbits2.png" class="rabbits" alt="兔子" />
+            </div>
+            <button type="button" class="btn-lucky"></button>
+        </div>
+        <div class="menu">
+            <a href="./rule.html" class="menu-item">
+                <i class="icon-star"></i>
+                <span class="menu-text">活动规则</span>
+            </a>
+            <a href="javascript:" class="menu-item">
+                <i class="icon-star"></i>
+                <span class="menu-text go-my-rabbits">我的娃娃</span>
+            </a>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="./js/layer_mobile/layer.js"></script>
+    <script src="./js/apiConfig.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
